@@ -11,13 +11,13 @@ export class User {
         this.age = age
     }
 
-    isValid(email, nom, prenom, age) {
+    isValid() {
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if(email.match(mailformat)) {
-            if(age < 13) {
+        if(this.email.match(mailformat)) {
+            if(this.age < 13) {
                 console.log('Too young')
             }
-            if(nom === null || prenom === null) {
+            if(this.nom === null || this.prenom === null) {
                 console.log("Missing lastname or fistname !")
             }   
             
