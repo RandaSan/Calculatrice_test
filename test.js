@@ -1,3 +1,4 @@
+import { User } from "./user.js"
 class Calculatrice {
     n1
     n2
@@ -87,3 +88,13 @@ function testDiv(n1, n2) {
 }
 
 testDiv(2, 1)
+
+let user = new User("nom@mail.fr", "Nom", "Prenom", 22)
+let user2 = new User("nom@mail.fr", "Nom", "Prenom", 10)
+let user3 = new User("notanmail.fr", "Nomp", "Prenom", 15)
+let user4 = new User("nom@mail.fr", null, "Prenom", 22)
+
+user.isValid()
+user2.isValid()
+user3.isValid()
+user4.isValid()
